@@ -1,14 +1,19 @@
 const isMobile = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-if (isMobile.checked) {
-    appareil();
+if (isMobile) {
+    mobile();
   } else {
-	appareil();
-  	alert("Ordinateur");
+    ordinateur();
   }
 
-function appareil() {
+
+function mobile() {
     var audio1 = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-sci-fi-interface-zoom-890.mp3');
+    audio1.loop = false;
+    audio1.play(); 
+}
+function ordinateur() {
+    var audio2 = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-interface-hint-notification-911.mp3");
     audio1.loop = false;
     audio1.play(); 
 }
