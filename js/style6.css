@@ -506,7 +506,7 @@ input[type="checkbox"],
   stroke: #ffffff;
   fill: #ffffff;
   font-family: "Orbitron", sans-serif;
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 /* The typing effect */
@@ -547,7 +547,7 @@ input[type="checkbox"],
   transition: 1s transform;
   transform-origin: center;
   transform-box: fill-box;
-  pointer-events: auto;
+  pointer-events: all;
   /*pointer-events: bounding-box;*/
 }
 
@@ -679,7 +679,7 @@ input[type="checkbox2"],
   stroke: #ffffff;
   fill: #ffffff;
   font-family: "Orbitron", sans-serif;
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 /* The typing effect */
@@ -720,7 +720,7 @@ input[type="checkbox2"],
   transition: 1s transform;
   transform-origin: center;
   transform-box: fill-box;
-  pointer-events: auto;
+  pointer-events: all;
   /*pointer-events: bounding-box;*/
 }
 
@@ -851,7 +851,7 @@ input[type="checkbox3"],
   stroke: #ffffff;
   fill: #ffffff;
   font-family: "Orbitron", sans-serif;
-  pointer-events: auto;
+  pointer-events: all;
 }
 
 /* The typing effect */
@@ -892,7 +892,7 @@ input[type="checkbox3"],
   transition: 1s transform;
   transform-origin: center;
   transform-box: fill-box;
-  pointer-events: auto;
+  pointer-events: all;
   /*pointer-events: bounding-box;*/
 }
 
