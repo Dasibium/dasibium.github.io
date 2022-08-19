@@ -506,7 +506,7 @@ input[type="checkbox"],
   stroke: #ffffff;
   fill: #ffffff;
   font-family: "Orbitron", sans-serif;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 /* The typing effect */
@@ -547,7 +547,8 @@ input[type="checkbox"],
   transition: 1s transform;
   transform-origin: center;
   transform-box: fill-box;
-  pointer-events: bounding-box;
+  pointer-events: auto;
+  /*pointer-events: bounding-box;*/
 }
 
 input[type="checkbox"]:checked + svg #fireCircles #outerCircle {
@@ -655,6 +656,7 @@ body .choix2 {
   height: 50vw;
   transform-origin: bottom right;
   transform: scale(3);
+  
 }
 
 ::selection {
@@ -677,7 +679,7 @@ input[type="checkbox2"],
   stroke: #ffffff;
   fill: #ffffff;
   font-family: "Orbitron", sans-serif;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 /* The typing effect */
@@ -718,7 +720,8 @@ input[type="checkbox2"],
   transition: 1s transform;
   transform-origin: center;
   transform-box: fill-box;
-  pointer-events: bounding-box;
+  pointer-events: auto;
+  /*pointer-events: bounding-box;*/
 }
 
 input[type="checkbox2"]:checked + svg #fireCircles2 #outerCircle2 {
@@ -848,7 +851,7 @@ input[type="checkbox3"],
   stroke: #ffffff;
   fill: #ffffff;
   font-family: "Orbitron", sans-serif;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 /* The typing effect */
@@ -889,7 +892,8 @@ input[type="checkbox3"],
   transition: 1s transform;
   transform-origin: center;
   transform-box: fill-box;
-  pointer-events: bounding-box;
+  pointer-events: auto;
+  /*pointer-events: bounding-box;*/
 }
 
 input[type="checkbox3"]:checked + svg #fireCircles3 #outerCircle3 {
