@@ -3,7 +3,7 @@ div {
   position: absolute;
   display: block;
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   padding: 0;
   overflow: visible;
 }
@@ -43,12 +43,12 @@ body .target.right {
   right: 0;
 }
 body .hud {
-  display: flex;
-  align-items: center;
+  /*display: flex;
+  align-items: center;*/
   /*justify-content: center;*/
-  /*position: relative;
-  top: 10vw;*/
-  left: 250px;
+  position: relative;
+  top: 0vw;
+  left: 0px;
   width: 50vw;
   height: 50vw;
   transition: all 0.5s ease;
