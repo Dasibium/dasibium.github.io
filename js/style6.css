@@ -1,0 +1,1135 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+div {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+div:before, div:after {
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+body {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  font-family: 'Open Sans';
+  font-size: 1vw;
+  background: #0d0d0d;
+  /*background: #0d0d0d url(https://source.unsplash.com/UfCYo7zHyY8) center center /cover repeat-y;
+   background-blend-mode: hard-light;
+   perspective: 500px;*/
+}
+body .target {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+}
+body .target.bottom {
+  top: auto;
+  bottom: 0;
+}
+body .target.right {
+  left: auto;
+  right: 0;
+}
+body .hud {
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+  /*position: relative;
+  top: 10vw;*/
+  left: 250px;
+  width: 50vw;
+  height: 50vw;
+  transition: all 0.5s ease;
+  transform-origin: center center;
+  /*transform-style: preserve-3d;*/
+  transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(.25);
+  /*animation: hud-3d 2s 4s ease-in-out forwards;*/
+  pointer-events: none;
+}
+body .hud .circle {
+  border-radius: 50%;
+}
+body .hud .orange {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: glow-orange 1s 3s ease-in-out forwards;
+}
+body .hud .orange .notches {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(500px) translate3d(0px, 0px, 0px);
+  animation: notches-rotate 3s 1s ease-in-out, notches-3d 2s 4s ease-in-out, notches-pulse-rotate 10s 6s ease-in-out alternate infinite;
+}
+body .hud .orange .notches .notch {
+  top: 0;
+  left: calc(50% - 0.25vw);
+  width: 0.5vw;
+  height: 50%;
+  transform-origin: bottom center;
+  animation: notches-grow 3.5s 0.5s ease-in-out;
+}
+body .hud .orange .notches .notch:before {
+  width: 100%;
+  height: 10%;
+  background: #0b6ade;
+  /*box-shadow: 0px 0px 10px 2px #0b6ade;*/
+}
+body .hud .orange .notches .notch1 {
+  transform: rotate(45deg);
+}
+body .hud .orange .notches .notch2 {
+  transform: rotate(75deg);
+}
+body .hud .orange .notches .notch3 {
+  transform: rotate(105deg);
+}
+body .hud .orange .notches .notch4 {
+  transform: rotate(135deg);
+}
+body .hud .orange .notches .notch5 {
+  transform: rotate(165deg);
+}
+body .hud .orange .notches .notch6 {
+  transform: rotate(195deg);
+}
+body .hud .orange .notches .notch7 {
+  transform: rotate(225deg);
+}
+body .hud .orange .notches .notch8 {
+  transform: rotate(255deg);
+}
+body .hud .orange .notches .notch9 {
+  transform: rotate(285deg);
+}
+body .hud .orange .notches .notch10 {
+  transform: rotate(315deg);
+}
+body .hud .orange .notches .notch11 {
+  transform: rotate(345deg);
+}
+body .hud .orange .notches .notch12 {
+  transform: rotate(375deg);
+}
+body .hud .orange .outer {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.85vw solid #0b6ade;
+  box-shadow: 0px 0px 1px 1px #0b6ade;
+}
+body .hud .orange .outer1 {
+  top: 7%;
+  left: 7%;
+  width: 86%;
+  height: 86%;
+  border: 0.25vw dotted #FFFFFF;
+  box-shadow: 0px 0px 5px 1px #0b6ade;
+}
+body .hud .orange .outer2 {
+  top: 12%;
+  left: 12%;
+  width: 76%;
+  height: 76%;
+  border: 0.45vw solid #0b6ade;
+}
+body .hud .orange .outer3 {
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  border: 0.25vw dotted #FFFFFF;
+}
+body .hud .orange .inner {
+  top: 22%;
+  left: 22%;
+  width: 56%;
+  height: 56%;
+  border: 0.25vw solid #0b6ade;
+}
+body .hud .orange .inner2 {
+  top: 23%;
+  left: 23%;
+  width: 54%;
+  height: 54%;
+  border: 0.25vw solid #0b6ade;
+}
+body .hud .orange .inner3 {
+  top: 36%;
+  left: 36%;
+  width: 28%;
+  height: 28%;
+  border: 0.25vw dashed #FFFFFF;
+  transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  animation: innerorange3-pulse-3d 2s 4s ease-in-out alternate infinite;
+}
+body .hud .orange .topnotches {
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  transform: rotate(90deg) perspective(500px) translate3d(0px, 0px, 0px);
+  animation: notchestop-rotate 2s 2s ease-in-out, notchestop-3d 2s 4s ease-in-out forwards;
+}
+body .hud .orange .topnotches .notch {
+  top: 0;
+  left: calc(50% - 0.4vw);
+  width: 0.8vw;
+  height: 50%;
+  transform-origin: bottom center;
+}
+body .hud .orange .topnotches .notch:before {
+  width: 100%;
+  height: 10%;
+  background: #FFFFFF;
+}
+body .hud .orange .topnotches .notch1 {
+  transform: rotate(-55deg);
+}
+body .hud .orange .topnotches .notch2 {
+  transform: rotate(-45deg);
+}
+body .hud .orange .topnotches .notch3 {
+  transform: rotate(-35deg);
+}
+body .hud .orange .topnotches .notch4 {
+  transform: rotate(-25deg);
+}
+body .hud .orange .topnotches .notch5 {
+  transform: rotate(-15deg);
+}
+body .hud .orange .topnotches .notch6 {
+  transform: rotate(-5deg);
+}
+body .hud .orange .topnotches .notch7 {
+  transform: rotate(5deg);
+}
+body .hud .orange .topnotches .notch8 {
+  transform: rotate(15deg);
+}
+body .hud .orange .topnotches .notch9 {
+  transform: rotate(25deg);
+}
+body .hud .orange .topnotches .notch10 {
+  transform: rotate(35deg);
+}
+body .hud .orange .topnotches .notch11 {
+  transform: rotate(45deg);
+}
+body .hud .orange .topnotches .notch12 {
+  transform: rotate(55deg);
+}
+body .hud .orange .bottomnotches {
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  transform: rotate(90deg) perspective(500px) translate3d(0px, 0px, 0px);
+  animation: notchestop-rotate 2s 2s ease-in-out, notchestop-3d 2s 4s ease-in-out forwards;
+}
+body .hud .orange .bottomnotches .notch {
+  top: 0;
+  left: calc(50% - 0.2vw);
+  width: 0.4vw;
+  height: 50%;
+  transform-origin: bottom center;
+}
+body .hud .orange .bottomnotches .notch:before {
+  width: 100%;
+  height: 10%;
+  background: #de0b47;
+}
+body .hud .orange .bottomnotches .notch1 {
+  transform: rotate(125deg);
+}
+body .hud .orange .bottomnotches .notch2 {
+  transform: rotate(135deg);
+}
+body .hud .orange .bottomnotches .notch3 {
+  transform: rotate(145deg);
+}
+body .hud .orange .bottomnotches .notch4 {
+  transform: rotate(155deg);
+}
+body .hud .orange .bottomnotches .notch5 {
+  transform: rotate(165deg);
+}
+body .hud .orange .bottomnotches .notch6 {
+  transform: rotate(175deg);
+}
+body .hud .orange .bottomnotches .notch7 {
+  transform: rotate(185deg);
+}
+body .hud .orange .bottomnotches .notch8 {
+  transform: rotate(195deg);
+}
+body .hud .orange .bottomnotches .notch9 {
+  transform: rotate(205deg);
+}
+body .hud .orange .bottomnotches .notch10 {
+  transform: rotate(215deg);
+}
+body .hud .orange .bottomnotches .notch11 {
+  transform: rotate(225deg);
+}
+body .hud .orange .bottomnotches .notch12 {
+  transform: rotate(235deg);
+}
+body .hud .orange .center {
+  top: 46%;
+  left: 43%;
+  width: 14%;
+  height: 8%;
+  transform: translate3d(0px, 0px, 0px);
+  animation: center-pulse-3d 12s 4s ease-in-out alternate infinite;
+}
+body .hud .orange .center .top, body .hud .orange .center .bottom {
+  width: 2vw;
+  height: 0.25vw;
+  background: #0b6ade;
+}
+body .hud .orange .center .top:before, body .hud .orange .center .bottom:before {
+  height: 1vw;
+  width: 0.25vw;
+  background: #0b6ade;
+}
+body .hud .orange .center .top.left {
+  top: 0;
+  left: 0;
+}
+body .hud .orange .center .top.right {
+  top: 0;
+  right: 0;
+}
+body .hud .orange .center .top.right:before {
+  right: 0;
+}
+body .hud .orange .center .bottom.left {
+  bottom: 0;
+  left: 0;
+}
+body .hud .orange .center .bottom.left:before {
+  bottom: 0;
+}
+body .hud .orange .center .bottom.right {
+  bottom: 0;
+  right: 0;
+}
+body .hud .orange .center .bottom.right:before {
+  bottom: 0;
+  right: 0;
+}
+body .hud .blue {
+  top: 32%;
+  left: 32%;
+  width: 36%;
+  height: 36%;
+  animation: glow-blue 1s 3s ease-in-out forwards, fade 10s 1s ease-in-out infinite;
+}
+body .hud .blue .inner1 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1vw solid #55E2F9;
+}
+body .hud .blue .inner2 {
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  border: 0.25vw solid #de0b47;
+  transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  animation: innerblue2-pulse-3d 2s 4s ease-in-out alternate infinite;
+}
+body .hud .blue .notches {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: notches-rotate 3s 1s ease-in-out;
+}
+body .hud .blue .notches .notch {
+  top: 0;
+  left: calc(50% - 0.25vw);
+  width: 0.5vw;
+  height: 50%;
+  transform-origin: bottom center;
+}
+body .hud .blue .notches .notch:before {
+  width: 100%;
+  height: 20%;
+  background: #55E2F9;
+}
+body .hud .blue .notches .notch1 {
+  transform: rotate(45deg);
+}
+body .hud .blue .notches .notch2 {
+  transform: rotate(75deg);
+}
+body .hud .blue .notches .notch3 {
+  transform: rotate(105deg);
+}
+body .hud .blue .notches .notch4 {
+  transform: rotate(135deg);
+}
+body .hud .blue .notches .notch5 {
+  transform: rotate(165deg);
+}
+body .hud .blue .notches .notch6 {
+  transform: rotate(195deg);
+}
+body .hud .blue .notches .notch7 {
+  transform: rotate(225deg);
+}
+body .hud .blue .notches .notch8 {
+  transform: rotate(255deg);
+}
+body .hud .blue .notches .notch9 {
+  transform: rotate(285deg);
+}
+body .hud .blue .notches .notch10 {
+  transform: rotate(315deg);
+}
+body .hud .blue .notches .notch11 {
+  transform: rotate(345deg);
+}
+body .hud .blue .notches .notch12 {
+  transform: rotate(375deg);
+}
+body .hud .callout {
+  opacity: 0;
+  width: 0;
+  height: 5vw;
+  border-bottom: 0.25vw solid #0b6ade;
+}
+body .hud .callout.left {
+  bottom: 12.5vw;
+  left: -10vw;
+  animation: calloutleft-grow 3s 3s ease-in-out alternate infinite;
+}
+body .hud .callout.right {
+  top: 7.5vw;
+  right: -10vw;
+  text-align: right;
+  animation: calloutright-grow 3s 4s ease-in-out alternate infinite;
+}
+body .hud .callout .title, body .hud .callout .body {
+  position: relative;
+  width: 100%;
+}
+body .hud .callout .title {
+  font-size: 2em;
+}
+body .target.top.left:hover ~ .hud {
+  animation: none;
+  /*transform: perspective(500px) rotateX(10deg) rotateY(-10deg) rotateZ(0deg) scale(0.75)*/
+}
+body .target.top.right:hover ~ .hud {
+  animation: none;
+  /*transform: perspective(500px) rotateX(10deg) rotateY(10deg) rotateZ(0deg) scale(0.75)*/
+}
+body .target.bottom.left:hover ~ .hud {
+  animation: none;
+  /*transform: perspective(500px) rotateX(-10deg) rotateY(-10deg) rotateZ(0deg) scale(0.75);*/
+}
+body .target.bottom.right:hover ~ .hud {
+  animation: none;
+  /*transform: perspective(500px) rotateX(-10deg) rotateY(10deg) rotateZ(0deg) scale(0.75);*/
+}
+body .message {
+  position: absolute;
+  right: 0.5vw;
+  top: 1vw;
+  max-width: 30vw;
+  font-size: 0.75em;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  z-index: 1;
+}
+body .message a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+body .message a:hover {
+  border-width: 3px;
+}
+
+/*css choix1*//*css choix1*//*css choix1*//*css choix1*//*css choix1*//*css choix1*/
+body .choix1 {
+  display: flex;
+  align-items: center;
+  /*justify-content: left;*/
+  /*position: relative;*/
+  top: 0vw;
+  left: -60vw;
+  width: 50vw;
+  height: 50vw;
+  transform-origin: bottom right;
+  transform: scale(3);
+}
+
+::selection {
+  background: transparent;
+}
+svg {
+  cursor: pointer;
+}
+
+input[type="checkbox"],
+#containerLeftBottom,
+#detailsContainer,
+#rdj {
+  display: none;
+  transition: 0.5s;
+}
+
+#titleContent,
+#detailsContent {
+  stroke: #ffffff;
+  fill: #ffffff;
+  font-family: "Orbitron", sans-serif;
+  pointer-events: none;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+#detailsContent {
+  color: hsl(0deg 0% 100%);
+    font-size: 20px;
+    font-family: 'Orbitron';
+    letter-spacing: 2px;
+    text-align: justify;
+/*     border-right: .15em solid orange;  */
+    margin: 0 auto;
+    animation: 
+      typing 0.5s steps(30, end),
+      blink-caret .5s step-end;
+}
+
+#containerBox,
+#containerRightBottom,
+#loadingLights {
+  transition: 0.5s;
+}
+
+#fireCircles,
+#innerCircle,
+#outerCircle,
+#middleCircle {
+  transition: 1s transform;
+  transform-origin: center;
+  transform-box: fill-box;
+  pointer-events: bounding-box;
+}
+
+input[type="checkbox"]:checked + svg #fireCircles #outerCircle {
+  transform: rotate(360deg);
+}
+
+input[type="checkbox"]:checked
+  + svg
+  #fireCircles
+  + #container
+  #containerLeftBottom {
+  display: block;/*rgb(241,239,193)*/
+}
+
+input[type="checkbox"]:checked + svg #detailsContainer {
+  display: block;
+}
+
+input[type="checkbox"]:checked + svg #rdj {
+  display: block;
+}
+
+input[type="checkbox"]:checked + svg #fireCircles #innerCircle {
+  transform: rotate(-120deg);
+}
+
+input[type="checkbox"]:checked
+  + svg
+  #fireCircles
+  + #container
+  #containerRightBottom {
+  transform: translate(0px, 464px);
+  transition: 0s;
+  position: relative;
+}
+
+input[type="checkbox"]:checked + svg #fireCircles + #container #containerBox {
+  d: path(
+    "M250,747.999998c19.64.515,28.781-.462,41.5-12l11.5-12c9.98-7.571,16.62-9.831,30.5-10h127.5c11.484-.409,17.715,1.899,28.5,10l13,12c9.098,9.05,15.207,11.924,27.5,14h327.5v0l62.5-2c11.148-3.896,20.243-6.824,28.5-14l72.5-72.5c5.15-7.217,7.68-11.513,11-20L1032.5,108h2v-41h-1.5v-25.25-25.25c.04-9.12834-2.76-12.34415-13-14.5h-53-793.5l-7.529-.63164C227.189,8.8461,272.536,56.6375,285,116.5l-2.75.5c12.64,101.955-49.038,162.651-139.75,166c0,0,0,.500001,0,.500001v-2.000001C72.263372,288.877571,9.87479,229.139162,5.49988,172.499999v578l189.50012-2h55"
+  );
+}
+
+input[type="checkbox"]:checked + svg #fireCircles + #container #loadingLights {
+  transform: translate(0px, 469px);
+  transition: 0.5s;
+  position: relative;
+}
+
+input[type="checkbox"]:checked + svg #fireCircles #middleCircle {
+  transform: rotate(250deg);
+  transition: 0.5s;
+}
+
+input[type="checkbox"]:checked + svg #fireCircles + #container #firstLight {
+  fill: rgb(255 255 255);
+  transition: 0.2s;
+  transition-delay: 0s;
+  transform-origin: left;
+}
+
+input[type="checkbox"]:checked + svg #fireCircles + #container #secondLight {
+  fill: rgb(97 208 255);
+  transition: 0.2s;
+  transition-delay: 0.2s;
+  transform-origin: left;
+}
+
+input[type="checkbox"]:checked + svg #fireCircles + #container #thirdLight {
+  fill: rgb(224 228 86);
+  transition: 0.2s;
+  transition-delay: 0.4s;
+  transform-origin: left;
+}
+
+#firstLight {
+  fill: rgb(20 174 224);
+  transition: 0.2s fill;
+  transition-delay: 0.4s;
+  transform-origin: right;
+}
+
+#secondLight {
+  fill: rgb(20 174 224);
+  transition: 0.2s fill;
+  transition-delay: 0.2s;
+  transform-origin: right;
+}
+
+#thirdLight {
+  transition: 0.2s fill;
+  transition-delay: 0s;
+  transform-origin: right;
+}
+/*css choix1*/
+
+/*css choix2*//*css choix2*//*css choix2*//*css choix2*//*css choix2*//*css choix2*/
+body .choix2 {
+  display: flex;
+  align-items: center;
+  /*justify-content: left;*/
+  /*position: relative;*/
+  top: 0vw;
+  left: 155vw;
+  width: 50vw;
+  height: 50vw;
+  transform-origin: bottom right;
+  transform: scale(3);
+}
+
+::selection {
+  background: transparent;
+}
+svg {
+  cursor: pointer;
+}
+
+input[type="checkbox2"],
+#containerLeftBottom2,
+#detailsContainer2,
+#rdj2 {
+  display: none;
+  transition: 0.5s;
+}
+
+#titleContent2,
+#detailsContent2 {
+  stroke: #ffffff;
+  fill: #ffffff;
+  font-family: "Orbitron", sans-serif;
+  pointer-events: none;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+#detailsContent2 {
+  color: hsl(0deg 0% 100%);
+    font-size: 20px;
+    font-family: 'Orbitron';
+    letter-spacing: 2px;
+    text-align: justify;
+/*     border-right: .15em solid orange;  */
+    margin: 0 auto;
+    animation: 
+      typing 0.5s steps(30, end),
+      blink-caret .5s step-end;
+}
+
+#containerBox2,
+#containerRightBottom2,
+#loadingLights2 {
+  transition: 0.5s;
+}
+
+#fireCircles2,
+#innerCircle2,
+#outerCircle2,
+#middleCircle2 {
+  transition: 1s transform;
+  transform-origin: center;
+  transform-box: fill-box;
+  pointer-events: bounding-box;
+}
+
+input[type="checkbox2"]:checked + svg #fireCircles2 #outerCircle2 {
+  transform: rotate(360deg);
+}
+
+input[type="checkbox2"]:checked
+  + svg
+  #fireCircles2
+  + #container2
+  #containerLeftBottom2 {
+  display: block;/*rgb(241,239,193)*/
+}
+
+input[type="checkbox2"]:checked + svg #detailsContainer2 {
+  display: block;
+}
+
+input[type="checkbox2"]:checked + svg #rdj2 {
+  display: block;
+}
+
+input[type="checkbox2"]:checked + svg #fireCircles2 #innerCircle2 {
+  transform: rotate(-120deg);
+}
+
+input[type="checkbox2"]:checked
+  + svg
+  #fireCircles2
+  + #container2
+  #containerRightBottom2 {
+  transform: translate(0px, 464px);
+  transition: 0s;
+  position: relative;
+}
+
+input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #containerBox2 {
+  d: path(
+    "M250,747.999998c19.64.515,28.781-.462,41.5-12l11.5-12c9.98-7.571,16.62-9.831,30.5-10h127.5c11.484-.409,17.715,1.899,28.5,10l13,12c9.098,9.05,15.207,11.924,27.5,14h327.5v0l62.5-2c11.148-3.896,20.243-6.824,28.5-14l72.5-72.5c5.15-7.217,7.68-11.513,11-20L1032.5,108h2v-41h-1.5v-25.25-25.25c.04-9.12834-2.76-12.34415-13-14.5h-53-793.5l-7.529-.63164C227.189,8.8461,272.536,56.6375,285,116.5l-2.75.5c12.64,101.955-49.038,162.651-139.75,166c0,0,0,.500001,0,.500001v-2.000001C72.263372,288.877571,9.87479,229.139162,5.49988,172.499999v578l189.50012-2h55"
+  );
+}
+
+input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #loadingLights2 {
+  transform: translate(0px, 469px);
+  transition: 0.5s;
+  position: relative;
+}
+
+input[type="checkbox2"]:checked + svg #fireCircles2 #middleCircle2 {
+  transform: rotate(250deg);
+  transition: 0.5s;
+}
+
+input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #firstLight2 {
+  fill: rgb(255 255 255);
+  transition: 0.2s;
+  transition-delay: 0s;
+  transform-origin: left;
+}
+
+input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #secondLight2 {
+  fill: rgb(97 208 255);
+  transition: 0.2s;
+  transition-delay: 0.2s;
+  transform-origin: left;
+}
+
+input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #thirdLight2 {
+  fill: rgb(224 228 86);
+  transition: 0.2s;
+  transition-delay: 0.4s;
+  transform-origin: left;
+}
+
+#firstLight2 {
+  fill: rgb(20 174 224);
+  transition: 0.2s fill;
+  transition-delay: 0.4s;
+  transform-origin: right;
+}
+
+#secondLight2 {
+  fill: rgb(20 174 224);
+  transition: 0.2s fill;
+  transition-delay: 0.2s;
+  transform-origin: right;
+}
+
+#thirdLight2 {
+  transition: 0.2s fill;
+  transition-delay: 0s;
+  transform-origin: right;
+}
+/*css choix2*/
+
+/*css choix3*//*css choix3*//*css choix3*//*css choix3*//*css choix3*//*css choix3*/
+body .choix3 {
+  display: flex;
+  align-items: center;
+  /*justify-content: left;*/
+  /*position: relative;*/
+  top: 50vw;
+  left: 165vw;
+  width: 50vw;
+  height: 50vw;
+  transform-origin: bottom right;
+  transform: scale(3);
+}
+
+::selection {
+  background: transparent;
+}
+svg {
+  cursor: pointer;
+}
+
+input[type="checkbox3"],
+#containerLeftBottom3,
+#detailsContainer3,
+#rdj3 {
+  display: none;
+  transition: 0.5s;
+}
+
+#titleContent3,
+#detailsContent3 {
+  stroke: #ffffff;
+  fill: #ffffff;
+  font-family: "Orbitron", sans-serif;
+  pointer-events: none;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+#detailsContent3 {
+  color: hsl(0deg 0% 100%);
+    font-size: 20px;
+    font-family: 'Orbitron';
+    letter-spacing: 2px;
+    text-align: justify;
+/*     border-right: .15em solid orange;  */
+    margin: 0 auto;
+    animation: 
+      typing 0.5s steps(30, end),
+      blink-caret .5s step-end;
+}
+
+#containerBox3,
+#containerRightBottom3,
+#loadingLights3 {
+  transition: 0.5s;
+}
+
+#fireCircles3,
+#innerCircle3,
+#outerCircle3,
+#middleCircle3 {
+  transition: 1s transform;
+  transform-origin: center;
+  transform-box: fill-box;
+  pointer-events: bounding-box;
+}
+
+input[type="checkbox3"]:checked + svg #fireCircles3 #outerCircle3 {
+  transform: rotate(360deg);
+}
+
+input[type="checkbox3"]:checked
+  + svg
+  #fireCircles3
+  + #container3
+  #containerLeftBottom3 {
+  display: block;/*rgb(241,239,193)*/
+}
+
+input[type="checkbox3"]:checked + svg #detailsContainer3 {
+  display: block;
+}
+
+input[type="checkbox3"]:checked + svg #rdj3{
+  display: block;
+}
+
+input[type="checkbox3"]:checked + svg #fireCircles3 #innerCircle3 {
+  transform: rotate(-120deg);
+}
+
+input[type="checkbox3"]:checked
+  + svg
+  #fireCircles3
+  + #container3
+  #containerRightBottom3 {
+  transform: translate(0px, 464px);
+  transition: 0s;
+  position: relative;
+}
+
+input[type="checkbox3"]:checked + svg #fireCircles3 + #container3 #containerBox3 {
+  d: path(
+    "M250,747.999998c19.64.515,28.781-.462,41.5-12l11.5-12c9.98-7.571,16.62-9.831,30.5-10h127.5c11.484-.409,17.715,1.899,28.5,10l13,12c9.098,9.05,15.207,11.924,27.5,14h327.5v0l62.5-2c11.148-3.896,20.243-6.824,28.5-14l72.5-72.5c5.15-7.217,7.68-11.513,11-20L1032.5,108h2v-41h-1.5v-25.25-25.25c.04-9.12834-2.76-12.34415-13-14.5h-53-793.5l-7.529-.63164C227.189,8.8461,272.536,56.6375,285,116.5l-2.75.5c12.64,101.955-49.038,162.651-139.75,166c0,0,0,.500001,0,.500001v-2.000001C72.263372,288.877571,9.87479,229.139162,5.49988,172.499999v578l189.50012-2h55"
+  );
+}
+
+input[type="checkbox3"]:checked + svg #fireCircles3 + #container3 #loadingLights3 {
+  transform: translate(0px, 469px);
+  transition: 0.5s;
+  position: relative;
+}
+
+input[type="checkbox3"]:checked + svg #fireCircles3 #middleCircle3 {
+  transform: rotate(250deg);
+  transition: 0.5s;
+}
+
+input[type="checkbox3"]:checked + svg #fireCircles3 + #container3 #firstLight3 {
+  fill: rgb(255 255 255);
+  transition: 0.2s;
+  transition-delay: 0s;
+  transform-origin: left;
+}
+
+input[type="checkbox3"]:checked + svg #fireCircles3 + #container3 #secondLight3 {
+  fill: rgb(97 208 255);
+  transition: 0.2s;
+  transition-delay: 0.2s;
+  transform-origin: left;
+}
+
+input[type="checkbox3"]:checked + svg #fireCircles3 + #container3 #thirdLight3 {
+  fill: rgb(224 228 86);
+  transition: 0.2s;
+  transition-delay: 0.4s;
+  transform-origin: left;
+}
+
+#firstLight3 {
+  fill: rgb(20 174 224);
+  transition: 0.2s fill;
+  transition-delay: 0.4s;
+  transform-origin: right;
+}
+
+#secondLight3 {
+  fill: rgb(20 174 224);
+  transition: 0.2s fill;
+  transition-delay: 0.2s;
+  transform-origin: right;
+}
+
+#thirdLight3 {
+  transition: 0.2s fill;
+  transition-delay: 0s;
+  transform-origin: right;
+}
+/*css choix3*/
+
+
+
+
+
+
+@keyframes glow-orange {
+  0% {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  100% {
+    filter: drop-shadow(0 0 0.5vw #0b6ade);
+  }
+}
+@keyframes glow-blue {
+  0% {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  100% {
+    filter: drop-shadow(0 0 0.5vw #55E2F9);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes notches-grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 0.5vw;
+  }
+}
+@keyframes notches-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes notches-pulse-rotate {
+  0% {
+    transform: rotate(0deg) perspective(500px) translate3d(0px, 0px, 80px);
+  }
+  25% {
+    transform: rotate(30deg) perspective(500px) translate3d(0px, 0px, 60px);
+  }
+  25% {
+    transform: rotate(0deg) perspective(500px) translate3d(0px, 0px, 80px);
+  }
+  100% {
+    transform: rotate(60deg) perspective(500px) translate3d(0px, 0px, 90px);
+  }
+}
+@keyframes notchestop-rotate {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes notchesbottom-rotate {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/*@keyframes calloutleft-grow {
+ 0%   {left: 11vw;width: 0;opacity: 0;}
+ 100% {left: -10vw;width: 21vw;opacity: 1;}
+ }
+ @keyframes calloutright-grow {
+ 0%   {right: 11vw;width: 0;opacity: 0;}
+ 100% {right: -10vw;width: 21vw;opacity: 1;}
+ }*/
+@keyframes hud-3d {
+  0% {
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);
+  }
+  100% {
+    transform: perspective(500px) rotateX(10deg) rotateY(-10deg) rotateZ(0deg) scale(0.75);
+  }
+}
+@keyframes notches-3d {
+  0% {
+    transform: perspective(500px) translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: perspective(500px) translate3d(0px, 0px, 80px);
+  }
+}
+@keyframes notchesbottom-3d {
+  0% {
+    transform: perspective(500px) translate3d(0px, 0px, 0px) rotate(0deg);
+  }
+  100% {
+    transform: perspective(500px) translate3d(0px, 0px, -140px) rotate(90deg);
+  }
+}
+@keyframes notchestop-3d {
+  0% {
+    transform: perspective(500px) translate3d(0px, 0px, 0px) rotate(0deg);
+  }
+  100% {
+    transform: perspective(500px) translate3d(0px, 0px, 140px) rotate(90deg);
+  }
+}
+@keyframes innerorange3-pulse-3d {
+  0% {
+    transform: perspective(500px) translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: perspective(500px) translate3d(0px, 0px, -60px);
+  }
+}
+@keyframes innerblue2-pulse-3d {
+  0% {
+    transform: perspective(500px) translate3d(0px, 0px, 0px);
+  }
+  50% {
+    transform: perspective(500px) translate3d(0px, 0px, -50px);
+  }
+  100% {
+    transform: perspective(500px) translate3d(0px, 0px, -200px);
+  }
+}
+@keyframes center-pulse-3d {
+  0% {
+    transform: perspective(500px) translate3d(0px, 0px, 0px);
+  }
+  50% {
+    transform: perspective(500px) translate3d(0px, 0px, 80px);
+  }
+  100% {
+    transform: perspective(500px) translate3d(0px, 0px, 40px);
+  }
+}
