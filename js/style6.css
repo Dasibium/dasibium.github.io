@@ -478,7 +478,7 @@ body .choix1 {
   align-items: center;
   /*justify-content: left;*/
   /*position: relative;*/
-  top: 0vw;
+  top: -25vw;
   left: -60vw;
   width: 50vw;
   height: 50vw;
@@ -534,7 +534,7 @@ input[type="checkbox"],
       blink-caret .5s step-end;
 }
 
-#containerBox,
+#containerBox{pointer-events: all;},
 #containerRightBottom,
 #loadingLights {
   transition: 0.5s;
@@ -650,7 +650,7 @@ body .choix2 {
   align-items: center;
   /*justify-content: left;*/
   /*position: relative;*/
-  top: 0vw;
+  top: -25vw;
   left: 155vw;
   width: 50vw;
   height: 50vw;
@@ -666,7 +666,7 @@ svg {
   cursor: pointer;
 }
 
-input[type="checkbox2"],
+input[type="checkbox"],
 #containerLeftBottom2,
 #detailsContainer2,
 #rdj2 {
@@ -707,7 +707,7 @@ input[type="checkbox2"],
       blink-caret .5s step-end;
 }
 
-#containerBox2,
+#containerBox2{pointer-events: all;},
 #containerRightBottom2,
 #loadingLights2 {
   transition: 0.5s;
@@ -724,11 +724,11 @@ input[type="checkbox2"],
   /*pointer-events: bounding-box;*/
 }
 
-input[type="checkbox2"]:checked + svg #fireCircles2 #outerCircle2 {
+input[type="checkbox"]:checked + svg #fireCircles2 #outerCircle2 {
   transform: rotate(360deg);
 }
 
-input[type="checkbox2"]:checked
+input[type="checkbox"]:checked
   + svg
   #fireCircles2
   + #container2
@@ -736,19 +736,19 @@ input[type="checkbox2"]:checked
   display: block;/*rgb(241,239,193)*/
 }
 
-input[type="checkbox2"]:checked + svg #detailsContainer2 {
+input[type="checkbox"]:checked + svg #detailsContainer2 {
   display: block;
 }
 
-input[type="checkbox2"]:checked + svg #rdj2 {
+input[type="checkbox"]:checked + svg #rdj2 {
   display: block;
 }
 
-input[type="checkbox2"]:checked + svg #fireCircles2 #innerCircle2 {
+input[type="checkbox"]:checked + svg #fireCircles2 #innerCircle2 {
   transform: rotate(-120deg);
 }
 
-input[type="checkbox2"]:checked
+input[type="checkbox"]:checked
   + svg
   #fireCircles2
   + #container2
@@ -758,38 +758,38 @@ input[type="checkbox2"]:checked
   position: relative;
 }
 
-input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #containerBox2 {
+input[type="checkbox"]:checked + svg #fireCircles2 + #container2 #containerBox2 {
   d: path(
     "M250,747.999998c19.64.515,28.781-.462,41.5-12l11.5-12c9.98-7.571,16.62-9.831,30.5-10h127.5c11.484-.409,17.715,1.899,28.5,10l13,12c9.098,9.05,15.207,11.924,27.5,14h327.5v0l62.5-2c11.148-3.896,20.243-6.824,28.5-14l72.5-72.5c5.15-7.217,7.68-11.513,11-20L1032.5,108h2v-41h-1.5v-25.25-25.25c.04-9.12834-2.76-12.34415-13-14.5h-53-793.5l-7.529-.63164C227.189,8.8461,272.536,56.6375,285,116.5l-2.75.5c12.64,101.955-49.038,162.651-139.75,166c0,0,0,.500001,0,.500001v-2.000001C72.263372,288.877571,9.87479,229.139162,5.49988,172.499999v578l189.50012-2h55"
   );
 }
 
-input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #loadingLights2 {
+input[type="checkbox"]:checked + svg #fireCircles2 + #container2 #loadingLights2 {
   transform: translate(0px, 469px);
   transition: 0.5s;
   position: relative;
 }
 
-input[type="checkbox2"]:checked + svg #fireCircles2 #middleCircle2 {
+input[type="checkbox"]:checked + svg #fireCircles2 #middleCircle2 {
   transform: rotate(250deg);
   transition: 0.5s;
 }
 
-input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #firstLight2 {
+input[type="checkbox"]:checked + svg #fireCircles2 + #container2 #firstLight2 {
   fill: rgb(255 255 255);
   transition: 0.2s;
   transition-delay: 0s;
   transform-origin: left;
 }
 
-input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #secondLight2 {
+input[type="checkbox"]:checked + svg #fireCircles2 + #container2 #secondLight2 {
   fill: rgb(97 208 255);
   transition: 0.2s;
   transition-delay: 0.2s;
   transform-origin: left;
 }
 
-input[type="checkbox2"]:checked + svg #fireCircles2 + #container2 #thirdLight2 {
+input[type="checkbox"]:checked + svg #fireCircles2 + #container2 #thirdLight2 {
   fill: rgb(224 228 86);
   transition: 0.2s;
   transition-delay: 0.4s;
@@ -823,7 +823,7 @@ body .choix3 {
   align-items: center;
   /*justify-content: left;*/
   /*position: relative;*/
-  top: 50vw;
+  top: 25vw;
   left: 165vw;
   width: 50vw;
   height: 50vw;
@@ -879,7 +879,7 @@ input[type="checkbox3"],
       blink-caret .5s step-end;
 }
 
-#containerBox3,
+#containerBox3{pointer-events: all;},
 #containerRightBottom3,
 #loadingLights3 {
   transition: 0.5s;
@@ -991,6 +991,93 @@ input[type="checkbox3"]:checked + svg #fireCircles3 + #container3 #thirdLight3 {
 
 
 
+
+/*
+TITRE DASIBIUM
+*/
+@import "compass/css3";
+@import "https://fonts.googleapis.com/css?family=Ubuntu:400,700italic";
+@import "https://fonts.googleapis.com/css?family=Cabin:400";
+* {
+  box-sizing: border-box;
+}
+/* =========================================
+ Stark Industries Logo
+ ========================================= */
+ /*body .logodas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 500vw;
+  left: -25px;
+  width: 50vw;
+  height: 50vw;
+  transition: all 0.5s ease;
+  transform-origin: center center;
+  animation: logo-entry 4s ease-in;
+  /*transform-style: preserve-3d;*/
+  /*transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(.25);*/
+  /*animation: hud-3d 2s 4s ease-in-out forwards;
+  pointer-events: none;
+}*/
+
+#logodas {
+  /*animation: logo-entry 4s ease-in;*/
+  /*width: 500px;*/
+  /*margin: auto;*/
+  position: relative;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 70vw;/*
+  left: -25px;*/
+  width: 150vw;
+  height: 50vw;
+  transition: all 0.5s ease;/*
+  transform-origin: center center;*/
+  animation: logo-entry 4s ease-in;
+  pointer-events: none;
+}
+h1 {
+  animation: text-glow 2s ease-out infinite alternate;
+  font-family: "Ubuntu", sans-serif;
+  color: #0b6ade;
+  font-size: 96px;/*
+  font-size: 25rem;*/
+  font-weight: bold;
+  /*position: absolute;*/
+  text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+}
+/* =========================================
+ Animation Keyframes
+ ========================================= */
+@keyframes logo-entry {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes text-glow {
+  0% {
+    color: #0b6ade;
+    text-shadow: 0 0 100px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+  }
+  100% {
+    color: #0ba2de;
+    text-shadow: 0 0 50px rgba(0, 255, 253, 0.6), 0 0 10px rgba(0, 255, 253, 0.4), 0 2px 0 #000;
+  }
+}
+
+/*
+FIN TITRE DASIBIUM
+*/
 
 
 
