@@ -37,36 +37,7 @@ function projets() {
   let sound7 = "https://assets.mixkit.co/sfx/preview/mixkit-high-tech-bleep-confirmation-2520.mp3";
   let audio = new Audio(document.querySelector('input[type="checkbox"]').checked ? sound6: sound6);
   /*document.getElementById('projets').style.animation="hud-3d 4s linear infinite";*/
-  document.getElementById("middleCircle2").animate(
-  [
-    { transform: 'rotate(-120deg)' }
-  ], {
-    duration: 500,
-	easing: 'ease-in-out',
-	fill: 'forwards',
-    iterations: 1
-  }
-);
-  document.getElementById("innerCircle2").animate(
-  [
-    { transform: 'rotate(-150deg)' }
-  ], {
-    duration: 500,
-	easing: 'ease-in-out',
-	fill: 'forwards',
-    iterations: 1
-  }
-);
-  document.getElementById("outerCircle2").animate(
-  [
-    { transform: 'rotate(360deg)' }
-  ], {
-    duration: 500,
-	easing: 'ease-in-out',
-	fill: 'forwards',
-    iterations: 1
-  }
-);
+  animbtnprojets();
   let das = document.querySelector('input[type="checkbox"]');
   if (das.checked) {
     das.checked = false;
@@ -89,36 +60,7 @@ function boutique() {
   let sound6 = "https://assets.mixkit.co/sfx/preview/mixkit-high-tech-bleep-2521.mp3";
   let sound7 = "https://assets.mixkit.co/sfx/preview/mixkit-high-tech-bleep-confirmation-2520.mp3";
   let audio = new Audio(document.querySelector('input[type="checkbox"]').checked ? sound6: sound6);
-  document.getElementById("middleCircle3").animate(
-  [
-    { transform: 'rotate(-120deg)' }
-  ], {
-    duration: 500,
-	easing: 'ease-in-out',
-	fill: 'forwards',
-    iterations: 1
-  }
-);
-  document.getElementById("innerCircle3").animate(
-  [
-    { transform: 'rotate(-150deg)' }
-  ], {
-    duration: 500,
-	easing: 'ease-in-out',
-	fill: 'forwards',
-    iterations: 1
-  }
-);
-  document.getElementById("outerCircle3").animate(
-  [
-    { transform: 'rotate(360deg)' }
-  ], {
-    duration: 500,
-	easing: 'ease-in-out',
-	fill: 'forwards',
-    iterations: 1
-  }
-);
+  animbtnboutique();
   let das = document.querySelector('input[type="checkbox"]');
   if (das.checked) {
     das.checked = false;
@@ -137,4 +79,142 @@ function ouvrepageprojets() {
 
 function ouvrepageboutique() {
 	window.open("https://www.ebay.fr/", "_self");
+}
+
+function animbtnprojets(){
+	document.getElementById("middleCircle2").animate(
+	  [
+		{ transform: 'rotate(-120deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	document.getElementById("innerCircle2").animate(
+	  [
+		{ transform: 'rotate(-150deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	document.getElementById("outerCircle2").animate(
+	  [
+		{ transform: 'rotate(360deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	setTimeout(animbtnprojets2, 1000); 
+}
+
+
+function animbtnprojets2(){
+	document.getElementById("middleCircle2").animate(
+	  [
+		{ transform: 'rotate(120deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	document.getElementById("innerCircle2").animate(
+	  [
+		{ transform: 'rotate(150deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	document.getElementById("outerCircle2").animate(
+	  [
+		{ transform: 'rotate(-360deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+}
+
+function animbtnboutique(){
+	
+	document.getElementById("middleCircle3").animate(
+	  [
+		{ transform: 'rotate(-120deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	document.getElementById("innerCircle3").animate(
+	  [
+		{ transform: 'rotate(-150deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	document.getElementById("outerCircle3").animate(
+	  [
+		{ transform: 'rotate(360deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	setTimeout(animbtnboutique2, 1000); 
+}
+
+
+function animbtnboutique2(){
+	
+	document.getElementById("middleCircle3").animate(
+	  [
+		{ transform: 'rotate(120deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	document.getElementById("innerCircle3").animate(
+	  [
+		{ transform: 'rotate(150deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
+	document.getElementById("outerCircle3").animate(
+	  [
+		{ transform: 'rotate(-360deg)' }
+	  ], {
+		duration: 500,
+		easing: 'ease-in-out',
+		fill: 'forwards',
+		iterations: 1
+	  }
+	);
 }
