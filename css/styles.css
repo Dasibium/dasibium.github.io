@@ -1155,6 +1155,14 @@ input[type='checkbox'] {
 	margin-right: auto;
 	margin-bottom: 3rem;
 	margin-left: auto;
+	padding: 7rem 5rem;
+}
+
+.lightbox-basic2 img {
+	display: block;
+	margin-right: auto;
+	margin-bottom: 3rem;
+	margin-left: auto;
 }
 
 .lightbox-basic h3 {
