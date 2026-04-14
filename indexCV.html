@@ -5,7 +5,7 @@
 <body style='margin : 0px; overflow: hidden;'>
   <script>
     var markerVisible = { "obj1": false };
-    //var markertrouve = { "obj1": false };
+    var markertrouve = { "obj1": false };
     //var jeufini = false;
 
     AFRAME.registerComponent('registerevents', {
@@ -30,7 +30,7 @@
                   //entity2.components.sound.playSound();
                   //jeufini = true;
                   //console.log('[JEU TERMINE !!!]');
-                  //setTimeout(openUrl, 20000); // Pause de 60 secondes
+                  //setTimeout(openUrl, 20000); // Pause de 20 secondes
 
                   //function openUrl(){
                      //window .location.href = 'https://dasibium.github.io/event0001/indexh6.html';
@@ -59,7 +59,7 @@
 	</a-assets>
 
 		<a-marker id='obj1' type="barcode" value="3" registerevents>
-			<a-entity id="box1" position="1 0 0" rotation="0 90 0" scale="0.2 0.2 0.2" animation-mixer="loop: repeat" gltf-model="#cloche" visible='true'</a-entity>
+			<a-entity id="box1" position="0.5 0 0" rotation="0 90 0" scale="0.2 0.2 0.2" animation-mixer="loop: repeat" gltf-model="#cloche" visible='true'</a-entity>
 		</a-marker>
 		
     <a-entity id='s2' sound="src: #sound2; poolSize: 1;" autoplay="false"></a-entity>
@@ -67,8 +67,8 @@
 		<a-entity camera></a-entity>
 		<a-entity light="type: directional;
                    castShadow: true;
-                   intensity: 5;
-                   shadowCameraVisible: true;"
+                   intensity: 3;
+                   shadowCameraVisible: false;"
             position="-3.5 0 3.5"></a-entity>
 
 	</a-scene>  
