@@ -1,0 +1,82 @@
+<script src="https://dasibium.github.io/lib/aframe.min.js"></script>
+<script src="https://dasibium.github.io/lib/aframe-ar.js"></script>
+<script src="https://dasibium.github.io/lib/aframe-extras.loaders.min.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+  <script>
+    var markerVisible = { "obj1": false };
+    //var markertrouve = { "obj1": false };
+    //var jeufini = false;
+
+    AFRAME.registerComponent('registerevents', {
+        init: function () 
+        {
+            let marker = this.el;
+            var entity = document.querySelector('#s2');
+          
+            var mark1 = document.querySelector('#box1');
+            
+            marker.addEventListener('markerFound', function() {
+                markerVisible[ marker.id ] = true;
+                //console.log( markerVisible );
+                //console.log('DEBUG markertrouve obj1:' + markertrouve['obj1'] + ' | obj2:' + markertrouve['obj2']);
+                
+                if( markerVisible['obj1'] == true && markertrouve['obj1'] == false ){
+                  entity.components.sound.playSound();
+                  //markertrouve['obj1'] = true;
+                }
+                
+                //if( markertrouve['obj1'] && jeufini == false){
+                  //entity2.components.sound.playSound();
+                  //jeufini = true;
+                  //console.log('[JEU TERMINE !!!]');
+                  //setTimeout(openUrl, 20000); // Pause de 60 secondes
+
+                  //function openUrl(){
+                     //window .location.href = 'https://dasibium.github.io/event0001/indexh6.html';
+                  //}
+                //}
+                
+            });
+
+            marker.addEventListener('markerLost', function() {
+                markerVisible[ marker.id ] = false;
+                //console.log( markerVisible );
+            });
+        }
+    });
+    
+    </script>
+  
+	<a-scene embedded vr-mode-ui="enabled: false;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;">
+	
+    <a-assets>
+      <a-asset-item id="sound2" src="https://dasibium.github.io/lib/assets/trouve.wav" response-type="arraybuffer"></a-asset-item>
+    </a-assets>
+	
+	<a-assets>
+		<a-asset-item id="cloche" src="https://dasibium.github.io/lib/assets/CarteVisiteAnimDASIBIUM.glb"></a-asset-item>
+	</a-assets>
+
+		<a-marker id='obj1' type="barcode" value="3" registerevents>
+			<a-entity id="box1" rotation="-90 90 -90" scale="2 2 2" animation-mixer="loop: repeat" gltf-model="#cloche" visible='true'</a-entity>
+		</a-marker>
+		
+    <a-entity id='s2' sound="src: #sound2; poolSize: 1;" autoplay="false"></a-entity>
+
+		<a-entity camera></a-entity>
+		<a-entity light="type: directional;
+                   castShadow: true;
+                   intensity: 5;
+                   shadowCameraVisible: true;"
+            position="-3.5 0 3.5"></a-entity>
+
+	</a-scene>  
+</body>
+
+
+
+
+
+
+
