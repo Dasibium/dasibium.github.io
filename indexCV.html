@@ -23,7 +23,7 @@
                 
                 if( markerVisible['obj1'] == true && markertrouve['obj1'] == false ){
                   entity.components.sound.playSound();
-                  //markertrouve['obj1'] = true;
+                  markertrouve['obj1'] = true;
                 }
                 
                 //if( markertrouve['obj1'] && jeufini == false){
@@ -48,7 +48,7 @@
     
     </script>
   
-	<a-scene embedded vr-mode-ui="enabled: false;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;">
+	<a-scene embedded vr-mode-ui="enabled: false;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;labelingMode: white-region; detectionMode: color_and_matrix; matrixCodeType: 3x3;" loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;">
 	
     <a-assets>
       <a-asset-item id="sound2" src="https://dasibium.github.io/lib/assets/trouve.wav" response-type="arraybuffer"></a-asset-item>
