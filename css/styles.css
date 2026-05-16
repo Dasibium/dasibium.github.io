@@ -853,6 +853,7 @@ input[type='checkbox'] {
 .tabs h2 {
 	margin-bottom: 1.125rem;
 	text-align: center;
+	background: url('../images/video-background.jpg') center center no-repeat;
 }
 
 .tabs .p-heading {
@@ -994,13 +995,14 @@ input[type='checkbox'] {
 .basic-1 {
 	padding-top: 6.375rem;
 	padding-bottom: 6.875rem;
-	background: url('../images/video-background.jpg') center center no-repeat;
-	background-size: cover; 
+	/* background: url('../images/video-background.jpg') center center no-repeat; */
+	/* background-size: cover;  */
 }
 
 .basic-1 h2 {
 	margin-bottom: 1.125rem;
 	text-align: center;
+	background: url('../images/video-background.jpg') center center no-repeat;
 }
 
 .basic-1 .p-heading {
@@ -1224,6 +1226,7 @@ input[type='checkbox'] {
 	padding-top: 6.875rem;
 	padding-bottom: 6.875rem;
 	background-color: #ffffff;
+	background-image: ""
 }
 
 .slider-2 .slider-container {
