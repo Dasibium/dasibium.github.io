@@ -148,7 +148,7 @@ button::-moz-focus-inner {
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
-  color: #FFF;
+  color: cyan;
   right: -6px;
   text-align: right;
   padding-right: 6px;
@@ -158,7 +158,7 @@ button::-moz-focus-inner {
   position: absolute;
   top: 0;
   right: 0;
-  color: #CCC;
+  color: transparent;
   font-size: 12px;
   line-height: 18px;
   white-space: nowrap; }
@@ -202,7 +202,7 @@ button::-moz-focus-inner {
 .mfp-arrow-left {
   left: 0; }
   .mfp-arrow-left:after {
-    border-right: 17px solid #FFF;
+    border-right: 17px solid cyan;
     margin-left: 31px; }
   .mfp-arrow-left:before {
     margin-left: 25px;
@@ -211,7 +211,7 @@ button::-moz-focus-inner {
 .mfp-arrow-right {
   right: 0; }
   .mfp-arrow-right:after {
-    border-left: 17px solid #FFF;
+    border-left: 17px solid cyan;
     margin-left: 39px; }
   .mfp-arrow-right:before {
     border-left: 27px solid #3F3F3F; }
