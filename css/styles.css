@@ -873,7 +873,7 @@ input[type='checkbox'] {
 	border: none;
 	border-bottom: 0.1875rem solid #f1f1f8;
 	border-radius: 0;
-	color: #f1f1f8;
+	color: #000000;
 	font: 700 1rem/1.75rem "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s ease;
@@ -1223,7 +1223,7 @@ input[type='checkbox'] {
 .slider-2 {
 	padding-top: 6.875rem;
 	padding-bottom: 6.875rem;
-	background-color: #000000;
+	background-color: #ffffff;
 }
 
 .slider-2 .slider-container {
@@ -1390,7 +1390,7 @@ input[type='checkbox'] {
 }
 
 .footer .fa-stack .fa-stack-1x {
-    color: #262431;
+    color: #ffffff;
 	transition: all 0.2s ease;
 }
 
@@ -1433,8 +1433,8 @@ a.back-to-top {
 	right: 0.75rem;
 	bottom: 0.75rem;
 	display: none;
-	width: 2.625rem;
-	height: 2.625rem;
+	width: 4.625rem;
+	height: 4.625rem;
 	border-radius: 1.875rem;
 	background: #00c9db url("../images/up-arrow.png") no-repeat center 47%;
 	background-size: 1.125rem 1.125rem;
