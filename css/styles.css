@@ -570,7 +570,7 @@ input[type='checkbox'] {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: #2f2c3d;
+	background: #ffffff;
 }
 
 .spinner {
@@ -847,7 +847,7 @@ input[type='checkbox'] {
 .tabs {
 	padding-top: 6.5rem;
 	padding-bottom: 4.25rem;
-	background-color: #2f2c3d;
+	background-color: #ffffff;
 }
 
 .tabs h2 {
@@ -1094,12 +1094,12 @@ input[type='checkbox'] {
 
 
 /*************************/
-/*     09. Details 1     */
+/*     09. Details 1    paques March*/
 /*************************/
 .basic-2 {
 	padding-top: 8rem;
 	padding-bottom: 3.5rem;
-	background-color: #262431;
+	background-color: #ffffff;
 }
 
 .basic-2 img {
@@ -1116,12 +1116,12 @@ input[type='checkbox'] {
 
 
 /*************************/
-/*     10. Details 2     */
+/*     10. Details 2  paques Snap   */
 /*************************/
 .basic-3 {
 	padding-top: 3.5rem;
 	padding-bottom: 7.25rem;
-	background-color: #262431;
+	background-color: #ffffff;
 }
 
 .basic-3 .text-container {
@@ -1146,7 +1146,7 @@ input[type='checkbox'] {
 	margin: 2.5rem auto;
 	padding: 3rem 1rem;
 	border-radius: 0.25rem;
-	background-color: #2f2c3d;
+	background-color: #ffffff;
 	text-align: left;
 }
 
@@ -1223,7 +1223,7 @@ input[type='checkbox'] {
 .slider-2 {
 	padding-top: 6.875rem;
 	padding-bottom: 6.875rem;
-	background-color: #2f2c3d;
+	background-color: #000000;
 }
 
 .slider-2 .slider-container {
@@ -1296,7 +1296,7 @@ input[type='checkbox'] {
 .counter {
 	padding-top: 6.5rem;
 	padding-bottom: 5.375rem;
-	background-color: #262431;
+	background-color: #ffffff;
 	text-align: center;
 }
 
@@ -1309,7 +1309,7 @@ input[type='checkbox'] {
 }
 
 .counter #counter .counter-value {
-	color: #f1f1f8;
+	color: #ffffff;
 	font: 700 3.5rem/4.25rem "Montserrat", sans-serif;	
 	vertical-align: middle;
 }
@@ -1362,7 +1362,7 @@ input[type='checkbox'] {
 /**********************/
 .footer {
 	padding-top: 5rem;
-	background-color: #262431;
+	background-color: #ffffff;
 }
 
 .footer .footer-col {
@@ -1414,12 +1414,12 @@ input[type='checkbox'] {
 .copyright {
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
-	background-color: #262431;
+	background-color: #ffffff;
 	text-align: center;
 }
 
 .copyright .p-small {
-	color: #f1f1f8;
+	color: #000000;
 	opacity: 0.6;
 }
 
@@ -1459,7 +1459,7 @@ a:hover.back-to-top {
 .ex-basic-1 {
 	padding-top: 2rem;
 	padding-bottom: 0.875rem;
-	background-color: #2f2c3d;
+	background-color: #ffffff;
 }
 
 .ex-basic-1 .breadcrumbs {
@@ -1474,7 +1474,7 @@ a:hover.back-to-top {
 .ex-basic-2 {
 	padding-top: 4.75rem;
 	padding-bottom: 4rem;
-	background-color: #262431;
+	background-color: #ffffff;
 }
 
 .ex-basic-2 h3 {
