@@ -640,7 +640,7 @@ input[type='checkbox'] {
 
 .navbar-custom .navbar-brand.logo-text {
 	font: 700 2.375rem/1.5rem "Montserrat", sans-serif;
-	color: #fff;
+	color: #000000;
 	letter-spacing: -0.5px;
 	text-decoration: none;
 }
@@ -651,7 +651,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link {
 	padding: 0 0.75rem 0 0.75rem;
-	color: #000;
+	color: #000000;
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
